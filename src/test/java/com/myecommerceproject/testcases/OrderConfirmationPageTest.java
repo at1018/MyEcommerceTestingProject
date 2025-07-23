@@ -16,7 +16,7 @@ public class OrderConfirmationPageTest extends BaseClass {
 	String confirmationMessage=("Thankyou for the order.").toUpperCase();
 	@Test
 	public void verifyOrderConfirmationMessage() {
-		HomePage homePage=loginPage.loginScreen(prop.getProperty("username"), prop.getProperty("password"));
+		HomePage homePage=loginPage.loginScreen(System.getProperty("username"), System.getProperty("password"));
 		SearchResultPage searchResultPage=homePage.searchProduct(productName);
 		String productAddToCartSuccessMessage=searchResultPage.verifyProductAddToCart();
 		System.out.println(productAddToCartSuccessMessage);

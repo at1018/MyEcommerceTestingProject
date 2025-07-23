@@ -13,7 +13,7 @@ public class SearchResultPageTest extends BaseClass {
 	String imageUrl="https://rahulshettyacademy.com/api/ecom/uploads/productImage_1650649434146.jpeg";
 	@Test
 	public void verifyProductImage() {
-		HomePage homePage=loginPage.loginScreen(prop.getProperty("username"), prop.getProperty("password"));
+		HomePage homePage=loginPage.loginScreen(System.getProperty("username"), System.getProperty("password"));
 		SearchResultPage searchResultPage=homePage.searchProduct(productName);
 		String productImageUrl=searchResultPage.verifyProductImage();
 		System.out.println(productImageUrl);
@@ -21,7 +21,7 @@ public class SearchResultPageTest extends BaseClass {
 	}
 	@Test
 	public void verifyProductName() {
-		HomePage homePage=loginPage.loginScreen(prop.getProperty("username"), "Abcd@123456");
+		HomePage homePage=loginPage.loginScreen(System.getProperty("username"), System.getProperty("password"));
 		SearchResultPage searchResultPage=homePage.searchProduct(productName);
 		String productName1=searchResultPage.verifyProductName();
 		System.out.println(productName1);
@@ -29,7 +29,7 @@ public class SearchResultPageTest extends BaseClass {
 	}
 	@Test
 	public void verifyProductAddToCartSuccessMessage() {
-		HomePage homePage=loginPage.loginScreen(prop.getProperty("username"), prop.getProperty("password"));
+		HomePage homePage=loginPage.loginScreen(System.getProperty("username"), System.getProperty("password"));
 		SearchResultPage searchResultPage= homePage.searchProduct(productName);
 		String productAddToCartSuccessMessage=searchResultPage.verifyProductAddToCart();
 		System.out.println(productAddToCartSuccessMessage);
@@ -37,7 +37,7 @@ public class SearchResultPageTest extends BaseClass {
 	}
 	@Test
 	public void goToCartPageTest() {
-		HomePage homePage=loginPage.loginScreen(prop.getProperty("username"), prop.getProperty("password"));
+		HomePage homePage=loginPage.loginScreen(System.getProperty("username"), System.getProperty("password"));
 		SearchResultPage searchResultPage=homePage.searchProduct(productName);
 		String productAddToCartSuccessMessage=searchResultPage.verifyProductAddToCart();
 		System.out.println(productAddToCartSuccessMessage);

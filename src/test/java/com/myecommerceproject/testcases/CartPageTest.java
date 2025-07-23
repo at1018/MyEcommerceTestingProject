@@ -12,7 +12,7 @@ public class CartPageTest extends BaseClass{
 	String productName="ZARA COAT 3";
 	@Test
 	public void goToCartPageTest() {
-		HomePage homePage=loginPage.loginScreen(prop.getProperty("username"), prop.getProperty("password"));
+		HomePage homePage=loginPage.loginScreen(System.getProperty("username"), System.getProperty("password"));
 		SearchResultPage searchResultPage=homePage.searchProduct(productName);
 		String productAddToCartSuccessMessage=searchResultPage.verifyProductAddToCart();
 		System.out.println(productAddToCartSuccessMessage);

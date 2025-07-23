@@ -10,7 +10,7 @@ public class HomePageTest extends BaseClass {
 	String productName="ZARA COAT 3";
 	@Test
 	public void enterProductNameInSearchField() {
-		HomePage homePageTest=loginPage.loginScreen("ankit1234@gmail.com", "Abcd@1234");
+		HomePage homePageTest=loginPage.loginScreen(System.getProperty("username"), System.getProperty("password"));
 		homePageTest.searchProduct(productName);
 	}
 

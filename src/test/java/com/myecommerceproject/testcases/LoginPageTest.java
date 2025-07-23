@@ -21,6 +21,6 @@ public class LoginPageTest extends BaseClass{
 	@Test
 	public void loginToMyEcommerce() {
 //		LoginPage loginPage=new LoginPage(driver);
-		HomePage homePage= loginPage.loginScreen("ankit1234@gmail.com", "Abcd@1234");
+		HomePage homePage= loginPage.loginScreen(System.getProperty("username"), System.getProperty("password"));
 	}
 }
